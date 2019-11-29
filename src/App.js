@@ -26,19 +26,18 @@ function App() {
       />
       {/* Load user profile only when username exists */}
       {username?
-        <Suspense fallback={<UserLoader />}>
-          <User resource={userResource}>
-            <Suspense fallback={"Loading..."}>
-              <Orgs resource={orgsResource} />
-            </Suspense>
-          </User>
-        </Suspense>
-      : null}
-      {/* Load user repos only when username exists */}
-      {username?
-        <Suspense fallback={<ReposLoader />}>
-          <Repos resource={reposResource} />
-        </Suspense>
+        <>
+          <Suspense fallback={<UserLoader />}>
+            <User resource={userResource}>
+              <Suspense fallback={"Loading..."}>
+                <Orgs resource={orgsResource} />
+              </Suspense>
+            </User>
+          </Suspense>
+          <Suspense fallback={<ReposLoader />}>
+            <Repos resource={reposResource} />
+          </Suspense>
+        </>
       : null}
     </>
   );
