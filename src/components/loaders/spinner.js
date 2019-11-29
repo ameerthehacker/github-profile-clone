@@ -1,7 +1,7 @@
 import React from "react";
 import { Spinner as ChakraSpinner, Flex } from "@chakra-ui/core";
 
-export default function Spinner() {
+export default function Spinner(props) {
     return (
         <Flex marginTop={"5px"} justifyContent={"center"}>
             <ChakraSpinner
@@ -10,6 +10,7 @@ export default function Spinner() {
                 emptyColor="gray.200"
                 color="blue.500"
                 size="xl"
+                {...props}
             /> 
         </Flex>
     );
