@@ -15,13 +15,13 @@ function App() {
       />
       {/* Load user profile only when username exists */}
       {username?
-        <GitHubUser username={username} delay={0}>
+        <GitHubUser username={username} delay={3}>
           <GitHubUserOrgs username={username} delay={0}/>
         </GitHubUser>
       : null}
       {/* Load user repos only when username exists */}
       {username?
-          <GitHubUserRepos username={username} delay={0}/>
+          <GitHubUserRepos username={username} delay={1}/>
       : null}
     </>
   );
