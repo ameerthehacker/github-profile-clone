@@ -1,0 +1,72 @@
+[
+  {
+    "login": "webpack",
+    "id": 2105791,
+    "node_id": "MDEyOk9yZ2FuaXphdGlvbjIxMDU3OTE=",
+    "url": "https://api.github.com/orgs/webpack",
+    "repos_url": "https://api.github.com/orgs/webpack/repos",
+    "events_url": "https://api.github.com/orgs/webpack/events",
+    "hooks_url": "https://api.github.com/orgs/webpack/hooks",
+    "issues_url": "https://api.github.com/orgs/webpack/issues",
+    "members_url": "https://api.github.com/orgs/webpack/members{/member}",
+    "public_members_url": "https://api.github.com/orgs/webpack/public_members{/member}",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/2105791?v=4",
+    "description": ""
+  },
+  {
+    "login": "jmpressjs",
+    "id": 2321498,
+    "node_id": "MDEyOk9yZ2FuaXphdGlvbjIzMjE0OTg=",
+    "url": "https://api.github.com/orgs/jmpressjs",
+    "repos_url": "https://api.github.com/orgs/jmpressjs/repos",
+    "events_url": "https://api.github.com/orgs/jmpressjs/events",
+    "hooks_url": "https://api.github.com/orgs/jmpressjs/hooks",
+    "issues_url": "https://api.github.com/orgs/jmpressjs/issues",
+    "members_url": "https://api.github.com/orgs/jmpressjs/members{/member}",
+    "public_members_url": "https://api.github.com/orgs/jmpressjs/public_members{/member}",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/2321498?v=4",
+    "description": null
+  },
+  {
+    "login": "css-modules",
+    "id": 12612655,
+    "node_id": "MDEyOk9yZ2FuaXphdGlvbjEyNjEyNjU1",
+    "url": "https://api.github.com/orgs/css-modules",
+    "repos_url": "https://api.github.com/orgs/css-modules/repos",
+    "events_url": "https://api.github.com/orgs/css-modules/events",
+    "hooks_url": "https://api.github.com/orgs/css-modules/hooks",
+    "issues_url": "https://api.github.com/orgs/css-modules/issues",
+    "members_url": "https://api.github.com/orgs/css-modules/members{/member}",
+    "public_members_url": "https://api.github.com/orgs/css-modules/public_members{/member}",
+    "avatar_url": "https://avatars2.githubusercontent.com/u/12612655?v=4",
+    "description": ""
+  },
+  {
+    "login": "webpack-contrib",
+    "id": 25012217,
+    "node_id": "MDEyOk9yZ2FuaXphdGlvbjI1MDEyMjE3",
+    "url": "https://api.github.com/orgs/webpack-contrib",
+    "repos_url": "https://api.github.com/orgs/webpack-contrib/repos",
+    "events_url": "https://api.github.com/orgs/webpack-contrib/events",
+    "hooks_url": "https://api.github.com/orgs/webpack-contrib/hooks",
+    "issues_url": "https://api.github.com/orgs/webpack-contrib/issues",
+    "members_url": "https://api.github.com/orgs/webpack-contrib/members{/member}",
+    "public_members_url": "https://api.github.com/orgs/webpack-contrib/public_members{/member}",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/25012217?v=4",
+    "description": "Community supported 3rd party packages for webpack"
+  },
+  {
+    "login": "open-bot",
+    "id": 26090214,
+    "node_id": "MDEyOk9yZ2FuaXphdGlvbjI2MDkwMjE0",
+    "url": "https://api.github.com/orgs/open-bot",
+    "repos_url": "https://api.github.com/orgs/open-bot/repos",
+    "events_url": "https://api.github.com/orgs/open-bot/events",
+    "hooks_url": "https://api.github.com/orgs/open-bot/hooks",
+    "issues_url": "https://api.github.com/orgs/open-bot/issues",
+    "members_url": "https://api.github.com/orgs/open-bot/members{/member}",
+    "public_members_url": "https://api.github.com/orgs/open-bot/public_members{/member}",
+    "avatar_url": "https://avatars3.githubusercontent.com/u/26090214?v=4",
+    "description": null
+  }
+]
