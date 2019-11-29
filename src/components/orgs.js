@@ -16,7 +16,7 @@ export default function Org({ username, delay }) {
       <Flex marginTop={"5px"}>
         {orgs? 
           orgs.map(
-            org => <Image padding={"3px"} width={"25px"} src={org.avatar_url} />
+            org => <Image key={org.id} padding={"3px"} width={"25px"} src={org.avatar_url} />
           )
           :
           <Text fontSize={"small"} color="gray.500"><Spinner size={"xs"} /> Loading orgs...</Text>
