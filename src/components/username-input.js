@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button, Input, Flex } from "@chakra-ui/core";
 
 export default function UsernameInput({ 
   initialUsername, onUsernameChange 
@@ -6,16 +7,21 @@ export default function UsernameInput({
   const [username, setUsername] = useState(initialUsername);
 
   return (
-    <>
-      <input
+    <Flex>
+      <Input
+        size={"lg"}
+        placeholder={"GitHub Username"}
         onChange={(e) => setUsername(e.target.value)}
         value={username}
       />
-      <button 
+      <Button
+        style={{ marginLeft: "5px" }}
+        variantColor={"green"}
+        size={"lg"}
         onClick={() => onUsernameChange(username)}
       >
         Fetch
-      </button>
-    </>
+      </Button>
+    </Flex>
   );
 }

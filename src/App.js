@@ -5,7 +5,7 @@ import GitHubUserRepos from './components/github-user-repos';
 import GitHubUserOrgs from './components/github-user-orgs';
 
 function App() {
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState("sokra");
 
   return (
     <>
@@ -15,13 +15,13 @@ function App() {
       />
       {/* Load user profile only when username exists */}
       {username?
-        <GitHubUser username={username} delay={2}>
-          <GitHubUserOrgs username={username} delay={3}/>
+        <GitHubUser username={username} delay={0}>
+          <GitHubUserOrgs username={username} delay={0}/>
         </GitHubUser>
       : null}
       {/* Load user repos only when username exists */}
       {username?
-          <GitHubUserRepos username={username} delay={1}/>
+          <GitHubUserRepos username={username} delay={0}/>
       : null}
     </>
   );
