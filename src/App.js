@@ -15,13 +15,12 @@ function App() {
       />
       {/* Load user profile only when username exists */}
       {username?
-        <User username={username} delay={3}>
-          <Orgs username={username} delay={5}/>
-        </User>
-      : null}
-      {/* Load user repos only when username exists */}
-      {username?
+        <>
+          <User username={username} delay={3}>
+            <Orgs username={username} delay={5}/>
+          </User>
           <Repos username={username} delay={1}/>
+        </>
       : null}
     </>
   );
