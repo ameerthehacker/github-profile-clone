@@ -3,7 +3,7 @@ import { fetchUserRepos } from "../services/api";
 import { List, ListItem, ListIcon, Flex, Badge } from "@chakra-ui/core";
 import ReposLoader from "./loaders/repos-loader";
 
-export default function GitHubUserRepos({ username, delay }) {
+export default function Repos({ username, delay }) {
   const [repos, setRepos] = useState(null);
 
   useEffect(() => {

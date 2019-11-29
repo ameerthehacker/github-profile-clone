@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import GitHubUser from './components/github-user';
 import UsernameInput from './components/username-input';
-import GitHubUserRepos from './components/github-user-repos';
-import GitHubUserOrgs from './components/github-user-orgs';
+import User from './components/user';
+import Repos from './components/repos';
+import Orgs from './components/orgs';
 
 function App() {
   const [username, setUsername] = useState("sokra");
@@ -15,13 +15,13 @@ function App() {
       />
       {/* Load user profile only when username exists */}
       {username?
-        <GitHubUser username={username} delay={3}>
-          <GitHubUserOrgs username={username} delay={0}/>
-        </GitHubUser>
+        <User username={username} delay={3}>
+          <Orgs username={username} delay={5}/>
+        </User>
       : null}
       {/* Load user repos only when username exists */}
       {username?
-          <GitHubUserRepos username={username} delay={1}/>
+          <Repos username={username} delay={1}/>
       : null}
     </>
   );

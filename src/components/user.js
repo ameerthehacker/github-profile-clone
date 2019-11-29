@@ -3,7 +3,7 @@ import { fetchUser } from "../services/api";
 import { Box, Image, Flex, Text } from "@chakra-ui/core";
 import UserContentLoader from "./loaders/user-loader";
 
-export default function GitHubUser({ username, delay, children}) {
+export default function User({ username, delay, children}) {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -36,6 +36,7 @@ export default function GitHubUser({ username, delay, children}) {
             <Text fontSize={"x-small"} color="gray.500">
               {user.bio}
             </Text>
+            {children}
           </Flex>
         </Flex>
         :
