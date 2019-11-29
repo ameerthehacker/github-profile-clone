@@ -1,22 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { fetchUserRepos } from "../services/api";
+import React from "react";
 import { List, ListItem, ListIcon, Flex, Badge } from "@chakra-ui/core";
 import ReposLoader from "./loaders/repos-loader";
 
-export default function Repos({ username, delay }) {
-  const [repos, setRepos] = useState(null);
-
-  useEffect(() => {
-    fetchUserRepos(username, delay)
-    .then(repos => setRepos(repos))
-    .catch(err => console.error(err));
-
-    // remove previously set repos
-    setRepos(null);
-  }, [username, delay]);
-
-  return repos ? 
-  (
+export default function Repos({ repos }) {
+  return (
     <Flex marginTop={"10px"} direction={"column"}>
       <List spacing={1}>
         {repos.map(
@@ -30,5 +17,5 @@ export default function Repos({ username, delay }) {
         )}
       </List>
     </Flex>
-  ) : <ReposLoader />;
+  );
 }
