@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { fetchUser } from "../services/api";
 import { Box, Image, Flex, Text } from "@chakra-ui/core";
-import Spinner from "./spinner";
+import UserContentLoader from "./loaders/user-loader";
 
 export default function GitHubUser({ username, delay, children}) {
   const [user, setUser] = useState(null);
@@ -39,7 +39,7 @@ export default function GitHubUser({ username, delay, children}) {
           </Flex>
         </Flex>
         :
-        <Spinner />
+        <UserContentLoader />
       }
     </Box>
   );
