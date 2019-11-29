@@ -1,19 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { fetchUser } from "../services/api";
+import React from "react";
 import { Box, Image, Flex, Text } from "@chakra-ui/core";
-import UserContentLoader from "./loaders/user-loader";
 
-export default function User({ username, delay, children}) {
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    fetchUser(username, delay)
-    .then(user => setUser(user))
-    .catch(err => console.error(err));
-
-    // remove the previously set user
-    setUser(null);
-  }, [username, delay]);
+export default function User({ resource, children}) {
+  const user = resource.read();
 
   return (
     <Box 
@@ -23,25 +12,21 @@ export default function User({ username, delay, children}) {
       padding={"5px"} 
       marginTop={"10px"}
     >
-      {user? 
-        <Flex direction={"row"}>
-          <Image size={"100px"} src={user.avatar_url} rounded="md" />
-          <Flex direction={"column"} paddingLeft={"10px"}>
-            <Text fontSize={"large"} >
-              {user.name}
-            </Text>
-            <Text fontSize={"medium"} color="gray.500">
-              {`@${user.login}`}
-            </Text>
-            <Text fontSize={"x-small"} color="gray.500">
-              {user.bio}
-            </Text>
-            {children}
-          </Flex>
+      <Flex direction={"row"}>
+        <Image size={"100px"} src={user.avatar_url} rounded="md" />
+        <Flex direction={"column"} paddingLeft={"10px"}>
+          <Text fontSize={"large"} >
+            {user.name}
+          </Text>
+          <Text fontSize={"medium"} color="gray.500">
+            {`@${user.login}`}
+          </Text>
+          <Text fontSize={"x-small"} color="gray.500">
+            {user.bio}
+          </Text>
+          {children}
         </Flex>
-        :
-        <UserContentLoader />
-      }
+      </Flex>
     </Box>
   );
 }
