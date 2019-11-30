@@ -33,7 +33,7 @@ export default function User({ username, delay, children}) {
               <Text fontSize={"medium"} color="gray.500">
                 {`@${user.login}`}
               </Text>
-              <Text fontSize={"x-small"} color="gray.500">
+              <Text fontSize={"small"} color="gray.500">
                 {user.bio}
               </Text>
               {children}
