@@ -5,7 +5,7 @@ import Repos from './components/repos';
 import Orgs from './components/orgs';
 
 function App() {
-  const [username, setUsername] = useState("sokra");
+  const [username, setUsername] = useState("");
 
   return (
     <>
