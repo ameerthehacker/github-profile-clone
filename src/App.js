@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import UsernameInput from './components/username-input';
+import ErrorComponent from './components/error';
+import Spinner from './components/loaders/spinner';
 import User from './components/user';
 import Repos from './components/repos';
 import Orgs from './components/orgs';
