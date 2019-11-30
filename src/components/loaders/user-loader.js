@@ -2,7 +2,8 @@ import React from "react"
 import ContentLoader from "react-content-loader"
 
 const UserLoader = () => (
-  <ContentLoader 
+  <ContentLoader
+    style={{ marginTop: "10px" }}
     height={60}
     width={400}
     speed={2}

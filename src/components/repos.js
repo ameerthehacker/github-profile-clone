@@ -30,5 +30,5 @@ export default function Repos({ username, delay }) {
         )}
       </List>
     </Flex>
-  ) : <ReposLoader />;
+  ) : null;
 }

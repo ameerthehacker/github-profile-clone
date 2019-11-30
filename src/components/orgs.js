@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { fetchUserOrgs } from "../services/api";
 import { Flex, Image, Text, Spinner } from "@chakra-ui/core";
+import OrgsLoader from './loaders/orgs-loader';
 
 export default function Org({ username, delay }) {
   const [orgs, setOrgs] = useState(null);
@@ -19,7 +20,7 @@ export default function Org({ username, delay }) {
             org => <Image key={org.id} padding={"3px"} width={"25px"} src={org.avatar_url} />
           )
           :
-          <Text fontSize={"small"} color="gray.500"><Spinner size={"xs"} /> Loading orgs...</Text>
+          null
         }
       </Flex>
     </>
