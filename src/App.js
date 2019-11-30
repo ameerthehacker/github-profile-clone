@@ -5,6 +5,7 @@ import Repos from './components/repos';
 import Orgs from './components/orgs';
 import UserLoader from './components/loaders/user-loader';
 import ReposLoader from './components/loaders/repos-loader';
+import OrgsLoader from './components/loaders/orgs-loader';
 
 import {
   eFetchUser,
@@ -29,7 +30,7 @@ function App() {
         <>
           <Suspense fallback={<UserLoader />}>
             <User resource={userResource}>
-              <Suspense fallback={"Loading..."}>
+              <Suspense fallback={<OrgsLoader />}>
                 <Orgs resource={orgsResource} />
               </Suspense>
             </User>
