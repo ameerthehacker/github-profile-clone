@@ -11,7 +11,7 @@ import {
 from './services/api';
 
 function App() {
-  const [username, setUsername] = useState();
+  const [username, setUsername] = useState("sokra");
   const [user, setUser] = useState(null);
   const [repos, setRepos] = useState(null);
   const [orgs, setOrgs] = useState(null);
