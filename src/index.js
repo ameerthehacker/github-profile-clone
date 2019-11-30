@@ -11,4 +11,5 @@ const Root = (
     </ThemeProvider>
 );
 
-ReactDOM.render(Root, document.getElementById('root'));
+ReactDOM.createRoot(document.getElementById('root'))
+        .render(Root);
