@@ -6,6 +6,10 @@ export default class Errorcomponent extends Component {
     super(props);
     this.state = { hasError: false };
   }
+
+  componentDidCatch(error, errorInfo) {
+    console.log(error, errorInfo);
+  }
   
   static getDerivedStateFromError() {
     return { hasError: true };
