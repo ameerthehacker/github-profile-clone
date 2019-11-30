@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+import { Flex, Icon, Text, Box } from '@chakra-ui/core';
 
 export default class Errorcomponent extends Component {
   constructor(props) {
@@ -13,9 +14,18 @@ export default class Errorcomponent extends Component {
   render() {
     if (this.state.hasError) {
       return (
-        <div>
-          oops!
-        </div>
+        <Box 
+          marginTop={"10px"}
+          padding={"20px"}
+          background={"white"}
+        >
+          <Flex alignItems={"center"} direction={"column"}>
+            <Icon size={"32px"} color={"red.500"} name={"close"} />
+            <Text marginTop={"5px"} color={"gray.500"}>
+              oops! something went wrong
+            </Text>
+          </Flex>
+        </Box>
       );
     }
     // Normally, just render children
